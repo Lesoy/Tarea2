@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Perris</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css'%}">
+</head>
+
+<body>
+    <!-- cabecera de la pagina -->
+    <header>
+        <!-- contenedor que almacena el titulo MIS PERRIS y el Menu-->
+        <div class="contenedor">
+            <h1 class="icon-guidedog">Mis Perris</h1>
+            <!-- control que permite visualizar el menu lateral (MOVIL)-->
+            <input type="checkbox" name="" id="menu-bar">
+            <label class="icon-th-list" for="menu-bar"></label>
+            <!-- menu -->
+            <nav class="menu">
+                <a href="{% url 'IND' %}">Inicio</a>
+                <a href="{% url 'GALE' %}">Galeria</a>
+                <a href="{% url 'FORM' %}">Formulario</a>
+                <a href="{% url 'CONT' %}">Quienes Somos</a>
+            </nav>
+        </div>
+    </header>
+    <!--sector del main (contenido de la pagina )-->
+    <main>
+        <!-- banner superior con imagen del perro y texto flotando sobre ella -->
+        <section id="banner">
+            <img src="{% static 'img/perro1.jpg' %}" alt="">
+            <div class="contenedor">
+                <h2>Mascotas felices en mis perris</h2>
+                <p>Cual es la mejor mascota para usted</p>
+                <a href="">Leer Mas</a>
+            </div>
+        </section>
+        <!-- sector de bienvenida-->
+        <section id="bienvenida">
+            <h2>Bienvenido a nuestro club</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi voluptate, quidem ipsa
+                velit, laboriosam at, aperiam quibusdam recusandae vero molestiae illo. Repellendus in amet nihil
+                necessitatibus, error voluptatum a.</p>
+        </section>
+        <!-- seccion de blog de los perros -->
+        <section id="blog">
+            <h3>lo utimo de nuestro blog</h3>
+            <div class="contenedor">
+                <article>
+                    <img src="{% static 'img/perro2.jpg' %}" alt="">
+                    <h4>Perrunos son amigos</h4>
+                </article>
+                <article>
+                    <img src="{% static 'img/perro3.png' %}" alt="">
+                    <h4>Simpatia perruna</h4>
+                </article>
+                <article>
+                    <img src="{% static 'img/perro4.jpg' %}" alt="">
+                    <h4>la linda mascota</h4>
+                </article>
+            </div>
+        </section>
+        <!-- informacion de perros para adoptar-->
+        <section id="info">
+            <h3>para muchos de nosotros las mascotas son miembros de nuestra familia</h3>
+            <div class="contenedor">
+                <article>
+                    <img src="{% static 'img/perro5.jpg' %}" alt="">
+                    <h4>Lulo</h4>
+                </article>
+                <article>
+                    <img src="{% static 'img/perro6.jpg' %}" alt="">
+                    <h4>Perruno</h4>
+                </article>
+                <article>
+                    <img src="{% static 'img/perro7.png' %}" alt="">
+                    <h4>Lilo</h4>
+                </article>
+                <article>
+                    <img src="{% static 'img/perro8.jpg' %}" alt="">
+                    <h4>Tuno</h4>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- sector del pie de pagina-->
+    <footer>
+        <div class="contenedor">
+            <p>Mis Perris - Desarrollo Web</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
